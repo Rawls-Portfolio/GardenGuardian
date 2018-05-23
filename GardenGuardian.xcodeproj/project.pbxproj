@@ -46,12 +46,12 @@
 		3ADADAE220ACF40000C20109 /* GardenGuardianTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GardenGuardianTests.swift; sourceTree = "<group>"; };
 		3ADADAE420ACF40000C20109 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3ADADAED20ACF9A400C20109 /* DataTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTypes.swift; sourceTree = "<group>"; };
-		3ADADAFB20ACFC8400C20109 /* CDFlower+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CDFlower+CoreDataClass.swift"; path = "CoreDataFiles/CDFlower+CoreDataClass.swift"; sourceTree = "<group>"; };
-		3ADADAFC20ACFC8400C20109 /* CDFlower+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CDFlower+CoreDataProperties.swift"; path = "CoreDataFiles/CDFlower+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		3ADADAFD20ACFC8400C20109 /* CDYard+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CDYard+CoreDataClass.swift"; path = "CoreDataFiles/CDYard+CoreDataClass.swift"; sourceTree = "<group>"; };
-		3ADADAFE20ACFC8400C20109 /* CDYard+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CDYard+CoreDataProperties.swift"; path = "CoreDataFiles/CDYard+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		3ADADAFF20ACFC8400C20109 /* CDBed+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CDBed+CoreDataClass.swift"; path = "CoreDataFiles/CDBed+CoreDataClass.swift"; sourceTree = "<group>"; };
-		3ADADB0020ACFC8400C20109 /* CDBed+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CDBed+CoreDataProperties.swift"; path = "CoreDataFiles/CDBed+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3ADADAFB20ACFC8400C20109 /* CDFlower+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDFlower+CoreDataClass.swift"; sourceTree = "<group>"; };
+		3ADADAFC20ACFC8400C20109 /* CDFlower+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDFlower+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3ADADAFD20ACFC8400C20109 /* CDYard+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDYard+CoreDataClass.swift"; sourceTree = "<group>"; };
+		3ADADAFE20ACFC8400C20109 /* CDYard+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDYard+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3ADADAFF20ACFC8400C20109 /* CDBed+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDBed+CoreDataClass.swift"; sourceTree = "<group>"; };
+		3ADADB0020ACFC8400C20109 /* CDBed+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDBed+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,15 +72,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3ADADABE20ACF3FF00C20109 = {
+		3A8CCAA020B5B3ED002D1264 /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
+				3ADADAD120ACF3FF00C20109 /* GardenGuardian.xcdatamodeld */,
 				3ADADAFB20ACFC8400C20109 /* CDFlower+CoreDataClass.swift */,
 				3ADADAFC20ACFC8400C20109 /* CDFlower+CoreDataProperties.swift */,
 				3ADADAFD20ACFC8400C20109 /* CDYard+CoreDataClass.swift */,
 				3ADADAFE20ACFC8400C20109 /* CDYard+CoreDataProperties.swift */,
 				3ADADAFF20ACFC8400C20109 /* CDBed+CoreDataClass.swift */,
 				3ADADB0020ACFC8400C20109 /* CDBed+CoreDataProperties.swift */,
+			);
+			path = "Core Data";
+			sourceTree = "<group>";
+		};
+		3A8CCAA120B5B413002D1264 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3ADADACA20ACF3FF00C20109 /* AppDelegate.swift */,
+				3ADADAD420ACF3FF00C20109 /* Assets.xcassets */,
+				3ADADAD620ACF3FF00C20109 /* LaunchScreen.storyboard */,
+				3ADADAD920ACF3FF00C20109 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3ADADABE20ACF3FF00C20109 = {
+			isa = PBXGroup;
+			children = (
 				3ADADAC920ACF3FF00C20109 /* GardenGuardian */,
 				3ADADAE120ACF40000C20109 /* GardenGuardianTests */,
 				3ADADAC820ACF3FF00C20109 /* Products */,
@@ -99,14 +118,11 @@
 		3ADADAC920ACF3FF00C20109 /* GardenGuardian */ = {
 			isa = PBXGroup;
 			children = (
-				3ADADACA20ACF3FF00C20109 /* AppDelegate.swift */,
+				3A8CCAA120B5B413002D1264 /* Supporting Files */,
+				3ADADAED20ACF9A400C20109 /* DataTypes.swift */,
+				3A8CCAA020B5B3ED002D1264 /* Core Data */,
 				3ADADACC20ACF3FF00C20109 /* ViewController.swift */,
 				3ADADACE20ACF3FF00C20109 /* Main.storyboard */,
-				3ADADAD420ACF3FF00C20109 /* Assets.xcassets */,
-				3ADADAD620ACF3FF00C20109 /* LaunchScreen.storyboard */,
-				3ADADAD920ACF3FF00C20109 /* Info.plist */,
-				3ADADAD120ACF3FF00C20109 /* GardenGuardian.xcdatamodeld */,
-				3ADADAED20ACF9A400C20109 /* DataTypes.swift */,
 			);
 			path = GardenGuardian;
 			sourceTree = "<group>";
@@ -387,7 +403,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5QBASGKWPR;
-				INFOPLIST_FILE = GardenGuardian/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/GardenGuardian/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = rawls.GardenGuardian;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -402,7 +418,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5QBASGKWPR;
-				INFOPLIST_FILE = GardenGuardian/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/GardenGuardian/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = rawls.GardenGuardian;
 				PRODUCT_NAME = "$(TARGET_NAME)";
