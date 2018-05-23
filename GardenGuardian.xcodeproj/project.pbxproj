@@ -14,6 +14,13 @@
 		3ADADAD520ACF3FF00C20109 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3ADADAD420ACF3FF00C20109 /* Assets.xcassets */; };
 		3ADADAD820ACF3FF00C20109 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ADADAD620ACF3FF00C20109 /* LaunchScreen.storyboard */; };
 		3ADADAE320ACF40000C20109 /* GardenGuardianTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADADAE220ACF40000C20109 /* GardenGuardianTests.swift */; };
+		3ADADAEE20ACF9A400C20109 /* DataTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADADAED20ACF9A400C20109 /* DataTypes.swift */; };
+		3ADADB0120ACFC8400C20109 /* CDFlower+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADADAFB20ACFC8400C20109 /* CDFlower+CoreDataClass.swift */; };
+		3ADADB0220ACFC8400C20109 /* CDFlower+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADADAFC20ACFC8400C20109 /* CDFlower+CoreDataProperties.swift */; };
+		3ADADB0320ACFC8400C20109 /* CDYard+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADADAFD20ACFC8400C20109 /* CDYard+CoreDataClass.swift */; };
+		3ADADB0420ACFC8400C20109 /* CDYard+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADADAFE20ACFC8400C20109 /* CDYard+CoreDataProperties.swift */; };
+		3ADADB0520ACFC8400C20109 /* CDBed+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADADAFF20ACFC8400C20109 /* CDBed+CoreDataClass.swift */; };
+		3ADADB0620ACFC8400C20109 /* CDBed+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADADB0020ACFC8400C20109 /* CDBed+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +45,13 @@
 		3ADADADE20ACF40000C20109 /* GardenGuardianTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GardenGuardianTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ADADAE220ACF40000C20109 /* GardenGuardianTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GardenGuardianTests.swift; sourceTree = "<group>"; };
 		3ADADAE420ACF40000C20109 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3ADADAED20ACF9A400C20109 /* DataTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTypes.swift; sourceTree = "<group>"; };
+		3ADADAFB20ACFC8400C20109 /* CDFlower+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CDFlower+CoreDataClass.swift"; path = "CoreDataFiles/CDFlower+CoreDataClass.swift"; sourceTree = "<group>"; };
+		3ADADAFC20ACFC8400C20109 /* CDFlower+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CDFlower+CoreDataProperties.swift"; path = "CoreDataFiles/CDFlower+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3ADADAFD20ACFC8400C20109 /* CDYard+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CDYard+CoreDataClass.swift"; path = "CoreDataFiles/CDYard+CoreDataClass.swift"; sourceTree = "<group>"; };
+		3ADADAFE20ACFC8400C20109 /* CDYard+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CDYard+CoreDataProperties.swift"; path = "CoreDataFiles/CDYard+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3ADADAFF20ACFC8400C20109 /* CDBed+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CDBed+CoreDataClass.swift"; path = "CoreDataFiles/CDBed+CoreDataClass.swift"; sourceTree = "<group>"; };
+		3ADADB0020ACFC8400C20109 /* CDBed+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CDBed+CoreDataProperties.swift"; path = "CoreDataFiles/CDBed+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +75,12 @@
 		3ADADABE20ACF3FF00C20109 = {
 			isa = PBXGroup;
 			children = (
+				3ADADAFB20ACFC8400C20109 /* CDFlower+CoreDataClass.swift */,
+				3ADADAFC20ACFC8400C20109 /* CDFlower+CoreDataProperties.swift */,
+				3ADADAFD20ACFC8400C20109 /* CDYard+CoreDataClass.swift */,
+				3ADADAFE20ACFC8400C20109 /* CDYard+CoreDataProperties.swift */,
+				3ADADAFF20ACFC8400C20109 /* CDBed+CoreDataClass.swift */,
+				3ADADB0020ACFC8400C20109 /* CDBed+CoreDataProperties.swift */,
 				3ADADAC920ACF3FF00C20109 /* GardenGuardian */,
 				3ADADAE120ACF40000C20109 /* GardenGuardianTests */,
 				3ADADAC820ACF3FF00C20109 /* Products */,
@@ -86,6 +106,7 @@
 				3ADADAD620ACF3FF00C20109 /* LaunchScreen.storyboard */,
 				3ADADAD920ACF3FF00C20109 /* Info.plist */,
 				3ADADAD120ACF3FF00C20109 /* GardenGuardian.xcdatamodeld */,
+				3ADADAED20ACF9A400C20109 /* DataTypes.swift */,
 			);
 			path = GardenGuardian;
 			sourceTree = "<group>";
@@ -203,8 +224,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				3ADADACD20ACF3FF00C20109 /* ViewController.swift in Sources */,
+				3ADADAEE20ACF9A400C20109 /* DataTypes.swift in Sources */,
+				3ADADB0520ACFC8400C20109 /* CDBed+CoreDataClass.swift in Sources */,
 				3ADADACB20ACF3FF00C20109 /* AppDelegate.swift in Sources */,
+				3ADADB0220ACFC8400C20109 /* CDFlower+CoreDataProperties.swift in Sources */,
+				3ADADB0420ACFC8400C20109 /* CDYard+CoreDataProperties.swift in Sources */,
+				3ADADB0120ACFC8400C20109 /* CDFlower+CoreDataClass.swift in Sources */,
 				3ADADAD320ACF3FF00C20109 /* GardenGuardian.xcdatamodeld in Sources */,
+				3ADADB0620ACFC8400C20109 /* CDBed+CoreDataProperties.swift in Sources */,
+				3ADADB0320ACFC8400C20109 /* CDYard+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
