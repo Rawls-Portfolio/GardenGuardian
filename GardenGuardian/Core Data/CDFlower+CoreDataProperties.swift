@@ -17,6 +17,7 @@ extension CDFlower {
         return NSFetchRequest<CDFlower>(entityName: "CDFlower")
     }
 
+    @NSManaged public var id: UUID
     @NSManaged public var height: Int16
     @NSManaged public var width: Int16
     @NSManaged public var spacing: Int16
@@ -26,19 +27,18 @@ extension CDFlower {
 
 }
 
-// MARK: Generated accessors for beds
 extension CDFlower {
-
+    
     @objc(addBedsObject:)
     @NSManaged public func addToBeds(_ value: CDBed)
-
+    
     @objc(removeBedsObject:)
     @NSManaged public func removeFromBeds(_ value: CDBed)
-
+    
     @objc(addBeds:)
     @NSManaged public func addToBeds(_ values: Set<CDBed>)
-
+    
     @objc(removeBeds:)
     @NSManaged public func removeFromBeds(_ values: Set<CDBed>)
-
+    
 }

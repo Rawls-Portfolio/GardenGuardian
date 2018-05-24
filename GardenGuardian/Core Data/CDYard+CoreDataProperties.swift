@@ -17,8 +17,9 @@ extension CDYard {
         return NSFetchRequest<CDYard>(entityName: "CDYard")
     }
 
+    @NSManaged public var id: UUID
     @NSManaged public var location: String
-    @NSManaged public var beds: Set<CDBed>
+    @NSManaged public var beds: Set<CDBed>?
 
 }
 

@@ -22,9 +22,9 @@ extension CDFlower {
         return CDFlower(entity: entityDescription, insertInto: context)
     }
     
-    @nonobjc static func fetch(withId id: String, in context: NSManagedObjectContext) -> CDFlower? {
+    @nonobjc static func fetch(withId id: UUID, in context: NSManagedObjectContext) -> CDFlower? {
         let fetchRequest: NSFetchRequest<CDFlower> = CDFlower.fetchRequest()
-        fetchRequest.predicate = NSPredicate(format: "id == [cd] %@", id)
+        fetchRequest.predicate = NSPredicate(format: "id == [cd] %@", id as CVarArg)
         guard let results = try? context.fetch(fetchRequest) else { return nil }
         return results.first
     }
@@ -33,26 +33,26 @@ extension CDFlower {
 extension CDFlower {
     
     func convert() -> Flower? {
-        let beds = self.beds.compactMap { $0.convert() }
+        
         return Flower(
+            id: self.id,
             height: Int(self.height),
             width: Int(self.width),
             spacing: Int(self.spacing),
             hardiness: Int(self.hardiness),
-            water: Int(self.water),
-            beds: beds)
+            water: Int(self.water)
+        )
     }
     
     func populate(with object: Flower) {
+        self.id = object.id
         self.height = Int16(object.height)
         self.width = Int16(object.width)
         self.spacing = Int16(object.spacing)
         self.hardiness = Int16(object.hardiness)
         self.water = Int16(object.water)
         
-        //assign beds at creation point, not here.
-        
-        
+        //assign beds in Persistence
     }
     
 }

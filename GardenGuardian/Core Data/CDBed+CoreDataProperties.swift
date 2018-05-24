@@ -17,10 +17,11 @@ extension CDBed {
         return NSFetchRequest<CDBed>(entityName: "CDBed")
     }
 
+    @NSManaged public var id: UUID
     @NSManaged public var depth: Int16
     @NSManaged public var length: Int16
     @NSManaged public var yard: CDYard
-    @NSManaged public var flowers: Set<CDFlower>
+    @NSManaged public var flowers: Set<CDFlower>?
 
 }
 

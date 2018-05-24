@@ -22,9 +22,9 @@ extension CDYard {
         return CDYard(entity: entityDescription, insertInto: context)
     }
     
-    @nonobjc static func fetch(withId id: String, in context: NSManagedObjectContext) -> CDYard? {
+    @nonobjc static func fetch(withId id: UUID, in context: NSManagedObjectContext) -> CDYard? {
         let fetchRequest: NSFetchRequest<CDYard> = CDYard.fetchRequest()
-        fetchRequest.predicate = NSPredicate(format: "id == [cd] %@", id)
+        fetchRequest.predicate = NSPredicate(format: "id == [cd] %@", id as CVarArg)
         guard let results = try? context.fetch(fetchRequest) else { return nil }
         return results.first
     }
@@ -33,12 +33,19 @@ extension CDYard {
 extension CDYard {
     
     func convert() -> Yard? {
-        let beds = self.beds.compactMap { $0.convert() }
-        return Yard(location: self.location, beds: beds)
+        let beds = self.beds?.compactMap { $0.convert() }
+        
+        return Yard(
+            id: self.id,
+            location: self.location,
+            beds: beds ?? []
+        )
     }
     
     func populate(with object: Yard) {
+        self.id = object.id
         self.location = object.location
+        
+        //assign beds in Persistence
     }
-    
 }
