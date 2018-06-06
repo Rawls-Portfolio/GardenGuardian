@@ -1,5 +1,11 @@
 import Foundation
 
+struct Garden {
+    let yard: Yard
+    let bed: Bed
+    let flowers: [Flower]
+}
+
 struct Flower {
     let name: String
     let height: Int

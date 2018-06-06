@@ -4,6 +4,7 @@ import Foundation
 
 
 class Persistence {
+    // MARK: - Context
     lazy var managedContext: NSManagedObjectContext = {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             fatalError()
@@ -25,18 +26,20 @@ class Persistence {
             """)
         }
     }
-    
+
+    // MARK: - Flower
     func flower(with name: String) -> Flower? {
         return CDFlower.fetch(with: name, in: managedContext)?.convert()
     }
     
-    func save(flower: Flower, in bed: Bed) -> CDFlower {
+    func save(flower: Flower) -> CDFlower {
         let cdFlower = CDFlower.fetch(with: flower.name, in: managedContext) ?? CDFlower.new(in: managedContext)
         cdFlower.populate(with: flower)
         saveContext()
         return cdFlower
     }
     
+    // MARK: - Bed
     func bed(with desc: String) -> Bed? {
         return CDBed.fetch(with: desc, in: managedContext)?.convert()
     }
@@ -50,6 +53,7 @@ class Persistence {
         return cdBed
     }
     
+    // MARK: - Yard
     func yard(with desc: String) -> Yard? {
         return CDYard.fetch(with: desc, in: managedContext)?.convert()
     }
@@ -62,10 +66,17 @@ class Persistence {
         saveContext()
         return cdYard 
     }
+    
+    func save(garden: Garden) -> (CDYard?, CDBed?, Set<CDFlower>?) {
+        let cdYard = save(yard: garden.yard)
+        let cdBed = save(bed: garden.bed)
+        cdYard?.addToBeds(cdBed)
+        let cdFlowers = Set(garden.flowers.map { flower -> CDFlower in
+            let cdFlower = save(flower: flower)
+            return cdFlower
+        })
+        cdBed.addToFlowers(cdFlowers)
+     
+        return(cdYard, cdBed, cdFlowers)
+    }
 }
-
-//            newBed.flowers = Set(bed.flowers.map { flower in
-//                let cdFlower = save(flower: flower, in: bed)
-//
-//                return cdFlower
-//            })

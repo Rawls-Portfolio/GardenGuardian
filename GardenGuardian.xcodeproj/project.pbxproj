@@ -77,7 +77,6 @@
 		3A8CCAA020B5B3ED002D1264 /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
-				3ADADAD120ACF3FF00C20109 /* GardenGuardian.xcdatamodeld */,
 				3ADADAFB20ACFC8400C20109 /* CDFlower+CoreDataClass.swift */,
 				3ADADAFC20ACFC8400C20109 /* CDFlower+CoreDataProperties.swift */,
 				3ADADAFD20ACFC8400C20109 /* CDYard+CoreDataClass.swift */,
@@ -121,6 +120,7 @@
 		3ADADAC920ACF3FF00C20109 /* GardenGuardian */ = {
 			isa = PBXGroup;
 			children = (
+				3ADADAD120ACF3FF00C20109 /* GardenGuardian.xcdatamodeld */,
 				3A8CCAA120B5B413002D1264 /* Supporting Files */,
 				3ADADAED20ACF9A400C20109 /* DataTypes.swift */,
 				3A8CCAA020B5B3ED002D1264 /* Core Data */,
