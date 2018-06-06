@@ -22,9 +22,9 @@ extension CDFlower {
         return CDFlower(entity: entityDescription, insertInto: context)
     }
     
-    @nonobjc static func fetch(withId id: UUID, in context: NSManagedObjectContext) -> CDFlower? {
+    @nonobjc static func fetch(with name: String, in context: NSManagedObjectContext) -> CDFlower? {
         let fetchRequest: NSFetchRequest<CDFlower> = CDFlower.fetchRequest()
-        fetchRequest.predicate = NSPredicate(format: "id == [cd] %@", id as CVarArg)
+        fetchRequest.predicate = NSPredicate(format: "name == [cd] %@", name)
         guard let results = try? context.fetch(fetchRequest) else { return nil }
         return results.first
     }
@@ -35,7 +35,7 @@ extension CDFlower {
     func convert() -> Flower? {
         
         return Flower(
-            id: self.id,
+            name: self.name,
             height: Int(self.height),
             width: Int(self.width),
             spacing: Int(self.spacing),
@@ -45,7 +45,8 @@ extension CDFlower {
     }
     
     func populate(with object: Flower) {
-        self.id = object.id
+        
+        self.name = object.name
         self.height = Int16(object.height)
         self.width = Int16(object.width)
         self.spacing = Int16(object.spacing)

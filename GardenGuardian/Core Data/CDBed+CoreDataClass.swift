@@ -22,9 +22,9 @@ extension CDBed {
         return CDBed(entity: entityDescription, insertInto: context)
     }
     
-    @nonobjc static func fetch(withId id: UUID, in context: NSManagedObjectContext) -> CDBed? {
+    @nonobjc static func fetch(with desc: String, in context: NSManagedObjectContext) -> CDBed? {
         let fetchRequest: NSFetchRequest<CDBed> = CDBed.fetchRequest()
-        fetchRequest.predicate = NSPredicate(format: "id == [cd] %@", id as CVarArg)
+        fetchRequest.predicate = NSPredicate(format: "desc == [cd] %@", desc)
         guard let results = try? context.fetch(fetchRequest) else { return nil }
         return results.first
     }
@@ -34,23 +34,18 @@ extension CDBed {
 extension CDBed {
     
     func convert() -> Bed? {
-        guard let yard = self.yard.convert() else {
-            return nil
-        }
-        
-        let flowers = self.flowers?.compactMap { $0.convert() }
+//        let flowers = self.flowers?.compactMap { $0.convert() }
 
         return Bed(
-            id: self.id,
+            desc: self.desc,
             depth: Int(self.depth),
-            length: Int(self.length),
-            yard: yard,
-            flowers: flowers ?? []
+            length: Int(self.length)
+//            flowers: flowers ?? []
         )
     }
     
     func populate(with object: Bed) {
-        self.id = object.id
+        self.desc = object.desc
         self.depth = Int16(object.depth)
         self.length = Int16(object.length)
         

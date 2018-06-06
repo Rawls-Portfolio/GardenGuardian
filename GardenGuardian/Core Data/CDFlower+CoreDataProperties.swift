@@ -17,7 +17,7 @@ extension CDFlower {
         return NSFetchRequest<CDFlower>(entityName: "CDFlower")
     }
 
-    @NSManaged public var id: UUID
+    @NSManaged public var name: String
     @NSManaged public var height: Int16
     @NSManaged public var width: Int16
     @NSManaged public var spacing: Int16

@@ -1,7 +1,7 @@
 import Foundation
 
 struct Flower {
-    let id: UUID
+    let name: String
     let height: Int
     let width: Int
     let spacing: Int
@@ -10,15 +10,12 @@ struct Flower {
 }
 
 struct Bed {
-    let id: UUID
+    let desc: String
     let depth: Int
     let length: Int
-    let yard: Yard
-    let flowers: [Flower]
 }
 
 struct Yard {
-    let id: UUID
+    let desc: String
     let location: String
-    let beds: [Bed]
 }
