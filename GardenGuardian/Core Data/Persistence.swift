@@ -11,7 +11,7 @@ class Persistence {
         }
         
         let managedContext = appDelegate.persistentContainer.viewContext
-        
+    
         return managedContext
     }()
     
